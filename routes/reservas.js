@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../db');
 
-router.post('/crear', async (req, res) => {
+router.post('/', async (req, res) => {
     const { nombre, email, fecha, hora, personas } = req.body;
     try {
         await pool.query(
